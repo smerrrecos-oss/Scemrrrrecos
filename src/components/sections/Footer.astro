@@ -1,0 +1,31 @@
+---
+import { site } from '../../data/site';
+---
+
+<footer id="contacts" class="bg-[#1B4332] text-white py-12 lg:py-16">
+	<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+		<div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+			<div>
+				<h3 class="text-2xl font-bold uppercase mb-6 lg:mb-0">{site.title}</h3>
+			</div>
+			<div class="flex flex-col gap-4 text-sm lg:text-base">
+				<div>
+					<span class="font-medium">Телефон:</span>
+					<a href={`tel:${site.phone.replace(/\s/g, '')}`} class="ml-2 hover:underline">
+						{site.phone}
+					</a>
+				</div>
+				<div>
+					<span class="font-medium">Адресса:</span>
+					<span class="ml-2">{site.address}</span>
+				</div>
+				<div>
+					<span class="font-medium">Пошта:</span>
+					<a href={`mailto:${site.email}`} class="ml-2 hover:underline">
+						{site.email}
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>

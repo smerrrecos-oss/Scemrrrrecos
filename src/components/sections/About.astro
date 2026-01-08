@@ -1,0 +1,42 @@
+---
+import { site } from '../../data/site';
+---
+
+<section id="about" class="bg-white py-16 lg:py-24">
+	<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+		<div class="mb-12 lg:mb-16">
+			<p class="text-sm text-[#2D2926]/60 mb-2">/01</p>
+			<h2 class="text-2xl lg:text-4xl font-bold text-[#2D2926] mb-6 lg:mb-8">
+				{site.about.title}
+			</h2>
+			<div class="max-w-4xl">
+				<p class="text-lg lg:text-xl text-[#2D2926] mb-4 leading-relaxed">
+					{site.about.headline}
+				</p>
+				<p class="text-base lg:text-lg text-[#2D2926]/80 leading-relaxed">
+					{site.about.subheadline}
+				</p>
+			</div>
+		</div>
+		
+		<!-- Stats -->
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16">
+			{site.about.stats.map((stat) => (
+				<div>
+					<div class="flex items-baseline gap-2 mb-2">
+						<span class="text-5xl lg:text-6xl font-bold text-[#2D2926]">{stat.value}</span>
+						{stat.label && <span class="text-xl lg:text-2xl text-[#2D2926]/60">{stat.label}</span>}
+					</div>
+					<p class="text-sm lg:text-base text-[#2D2926]/70 max-w-xs">
+						{stat.description}
+					</p>
+				</div>
+			))}
+		</div>
+		
+		<!-- Map Placeholder -->
+		<div class="w-full h-[500px] lg:h-[600px] bg-[#E8E8E0] rounded-lg">
+			<!-- Map will be added here -->
+		</div>
+	</div>
+</section>

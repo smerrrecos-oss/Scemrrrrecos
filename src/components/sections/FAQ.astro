@@ -1,0 +1,74 @@
+---
+import { site } from '../../data/site';
+---
+
+<section class="bg-white py-16 lg:py-24">
+	<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+		<div class="mb-12 lg:mb-16">
+			<p class="text-sm text-[#2D2926]/60 mb-2">/01</p>
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+				<div>
+					<h2 class="text-2xl lg:text-4xl font-bold text-[#2D2926] mb-2">
+						{site.faq.title}
+					</h2>
+					<p class="text-base lg:text-lg text-[#2D2926]/80">
+						{site.faq.subtitle}
+					</p>
+				</div>
+				<div>
+					<p class="text-base lg:text-lg text-[#2D2926]/80 leading-relaxed">
+						{site.faq.description}
+					</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="max-w-4xl space-y-4">
+			{site.faq.questions.map((item, index) => (
+				<div class="border-b border-[#2D2926]/10 pb-4">
+					<button 
+						class="w-full flex items-center justify-between text-left py-4 group"
+						data-faq-toggle
+					>
+						<span class="text-lg lg:text-xl font-medium text-[#2D2926] group-hover:text-[#2D2926]/80 transition-colors">
+							{item.q}
+						</span>
+						<span class="text-2xl text-[#2D2926] ml-4">+</span>
+					</button>
+					<div class="hidden faq-answer pb-4">
+						<p class="text-base lg:text-lg text-[#2D2926]/80 leading-relaxed">
+							{item.a}
+						</p>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>
+
+<script>
+	document.querySelectorAll('[data-faq-toggle]').forEach((button) => {
+		button.addEventListener('click', () => {
+			const answer = button.nextElementSibling;
+			const icon = button.querySelector('span:last-child');
+			const isOpen = !answer.classList.contains('hidden');
+			
+			// Close all other FAQs
+			document.querySelectorAll('.faq-answer').forEach((a) => {
+				a.classList.add('hidden');
+			});
+			document.querySelectorAll('[data-faq-toggle] span:last-child').forEach((i) => {
+				i.textContent = '+';
+			});
+			
+			// Toggle current FAQ
+			if (isOpen) {
+				answer.classList.add('hidden');
+				icon.textContent = '+';
+			} else {
+				answer.classList.remove('hidden');
+				icon.textContent = '×';
+			}
+		});
+	});
+</script>
