@@ -1,5 +1,6 @@
 ---
 import { site } from '../../data/site';
+import { withBase } from '../../utils/withBase';
 ---
 
 <section id="home" class="bg-[#F5F5F0]">
@@ -25,8 +26,16 @@ import { site } from '../../data/site';
 			</a>
 		</div>
 	</div>
-	<!-- Hero Image Placeholder -->
-	<div class="w-full h-[50vh] lg:h-[70vh] bg-gradient-to-b from-[#E8E8E0] via-[#D4D4C8] to-[#C0C0B0] relative overflow-hidden">
-		<!-- Image will be added here - Architectural complex image -->
-	</div>
+	<!-- Hero Image -->
+	{site.hero.image && (
+		<div class="w-full h-[50vh] lg:h-[70vh] relative overflow-hidden">
+			<img 
+				src={withBase(site.hero.image.src)} 
+				alt={site.hero.image.alt}
+				class="w-full h-full object-cover"
+				loading="eager"
+				decoding="async"
+			/>
+		</div>
+	)}
 </section>

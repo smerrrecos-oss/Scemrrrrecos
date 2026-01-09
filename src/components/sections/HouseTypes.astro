@@ -1,5 +1,6 @@
 ---
 import { site } from '../../data/site';
+import { withBase } from '../../utils/withBase';
 ---
 
 <section id="house-types" class="bg-[#F5F5F0] py-16 lg:py-24">
@@ -39,8 +40,16 @@ import { site } from '../../data/site';
 							</span>
 						</a>
 					</div>
-					<div class="flex-1 w-full h-[400px] lg:h-[500px] bg-[#E8E8E0] rounded-lg relative overflow-hidden">
-						<!-- Image will be added here -->
+					<div class="flex-1 w-full h-[400px] lg:h-[500px] rounded-lg relative overflow-hidden">
+						{type.image && (
+							<img 
+								src={withBase(type.image.src)} 
+								alt={type.image.alt}
+								class="w-full h-full object-cover rounded-lg"
+								loading="lazy"
+								decoding="async"
+							/>
+						)}
 					</div>
 				</div>
 			))}
