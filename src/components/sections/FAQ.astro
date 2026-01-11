@@ -23,7 +23,7 @@ import { site } from '../../data/site';
 			</div>
 		</div>
 		
-		<div class="max-w-4xl space-y-4">
+		<div class="max-w-4xl space-y-4 mb-8">
 			{site.faq.questions.map((item, index) => (
 				<div class="border-b border-[#2D2926]/10 pb-4">
 					<button 
@@ -33,7 +33,7 @@ import { site } from '../../data/site';
 						<span class="text-lg lg:text-xl font-medium text-[#2D2926] group-hover:text-[#2D2926]/80 transition-colors">
 							{item.q}
 						</span>
-						<span class="text-2xl text-[#2D2926] ml-4">+</span>
+						<span class="text-2xl text-[#2D2926] ml-4 transition-transform">+</span>
 					</button>
 					<div class="hidden faq-answer pb-4">
 						<p class="text-base lg:text-lg text-[#2D2926]/80 leading-relaxed">
@@ -43,6 +43,25 @@ import { site } from '../../data/site';
 				</div>
 			))}
 		</div>
+		
+		{site.faq.contactCta && (
+			<div class="max-w-4xl text-center pt-8 border-t border-[#2D2926]/10">
+				<p class="text-base lg:text-lg text-[#2D2926]/80 mb-6">
+					{site.faq.contactCta}
+				</p>
+				<a 
+					href="#contacts"
+					class="inline-flex items-center gap-2 bg-[#2D2926] text-white px-8 py-4 rounded-lg hover:bg-[#2D2926]/90 transition-colors text-sm font-medium uppercase"
+				>
+					ЗВ'ЯЗАТИСЬ З НАМИ
+					<span class="w-5 h-5 bg-white/20 rounded flex items-center justify-center">
+						<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+						</svg>
+					</span>
+				</a>
+			</div>
+		)}
 	</div>
 </section>
 
@@ -59,15 +78,18 @@ import { site } from '../../data/site';
 			});
 			document.querySelectorAll('[data-faq-toggle] span:last-child').forEach((i) => {
 				i.textContent = '+';
+				i.style.transform = '';
 			});
 			
 			// Toggle current FAQ
 			if (isOpen) {
 				answer.classList.add('hidden');
 				icon.textContent = '+';
+				icon.style.transform = '';
 			} else {
 				answer.classList.remove('hidden');
 				icon.textContent = '×';
+				icon.style.transform = 'rotate(45deg)';
 			}
 		});
 	});
