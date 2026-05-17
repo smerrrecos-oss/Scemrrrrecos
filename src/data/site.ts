@@ -7,7 +7,7 @@ export const site = {
 	
 	nav: [
 		{ label: 'Головна', href: '#home' },
-		{ label: 'Типи будинків', href: '#house-types' },
+		{ label: 'Типи будинків', href: '#types' },
 		{ label: 'Про комплекс', href: '#about' },
 		{ label: 'Як дістатись?', href: '#location' },
 	],
@@ -163,10 +163,10 @@ export const site = {
 	footer: {
 		nav: [
 			{ label: 'Головна', href: '#home' },
-			{ label: 'Типи будинків', href: '#house-types' },
+			{ label: 'Типи будинків', href: '#types' },
 			{ label: 'Про комплекс', href: '#about' },
 			{ label: 'Як дістатись?', href: '#location' },
-			{ label: 'Контакти', href: '#contacts' },
+			{ label: 'Контакти', href: '#contact' },
 		],
 		social: [
 			{ label: 'Instagram', href: 'https://instagram.com/smerecco' },

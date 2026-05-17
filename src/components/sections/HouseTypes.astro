@@ -3,7 +3,7 @@ import { site } from '../../data/site';
 import { withBase } from '../../utils/withBase';
 ---
 
-<section id="house-types" class="bg-[#F5F5F0] py-16 lg:py-24">
+<section id="types" class="bg-[#F5F5F0] py-16 lg:py-24">
 	<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
 		<div class="mb-12 lg:mb-16">
 			<p class="text-sm text-[#2D2926]/60 mb-2">/01</p>
@@ -29,7 +29,7 @@ import { withBase } from '../../utils/withBase';
 							{type.description}
 						</p>
 						<a 
-							href={`#house-type-${type.id}`}
+							href="#contact"
 							class="inline-flex items-center gap-2 {index === 1 ? 'bg-[#1B4332] hover:bg-[#1B4332]/90' : 'bg-[#2D2926] hover:bg-[#2D2926]/90'} text-white px-6 py-3 rounded-lg transition-colors text-sm font-medium"
 						>
 							ДЕТАЛЬНО

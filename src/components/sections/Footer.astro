@@ -2,7 +2,7 @@
 import { site } from '../../data/site';
 ---
 
-<footer id="contacts" class="bg-[#1B4332] text-white py-12 lg:py-16">
+<footer id="contact" class="bg-[#1B4332] text-white py-12 lg:py-16">
 	<div class="max-w-[1440px] mx-auto px-6 lg:px-12">
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
 			<!-- Logo -->
@@ -37,7 +37,9 @@ import { site } from '../../data/site';
 					</div>
 					<div>
 						<span class="font-medium">Адресса:</span>
-						<span class="ml-2 text-white/80">{site.address}</span>
+						<a href="#location" class="ml-2 text-white/80 hover:text-white transition-colors">
+							{site.address}
+						</a>
 					</div>
 					<div>
 						<span class="font-medium">Пошта:</span>

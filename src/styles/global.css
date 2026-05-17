@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
 .hero-headline {
 	font-size: clamp(1.5rem, 1.85vw + 0.7rem, 2.125rem);
 	line-height: 1.1;
