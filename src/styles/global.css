@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+.hero-headline {
+	font-size: clamp(1.5rem, 1.85vw + 0.7rem, 2.125rem);
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+}
+
+@media (min-width: 1024px) {
+	.hero-headline {
+		white-space: nowrap;
+	}
+}

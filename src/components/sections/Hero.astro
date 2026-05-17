@@ -1,48 +1,50 @@
 ---
+import { existsSync } from 'node:fs';
+import path from 'node:path';
 import { site } from '../../data/site';
 import { withBase } from '../../utils/withBase';
+
+const heroMainPath = path.join(process.cwd(), 'public/images/hero-main.jpg');
+const heroImageSrc = existsSync(heroMainPath) ? 'images/hero-main.jpg' : site.hero.image.src;
 ---
 
-<section id="home" class="bg-[#F5F5F0]">
-	<div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-12 lg:py-20">
-		<div class="max-w-3xl">
-			<h1 class="text-4xl lg:text-6xl xl:text-7xl font-bold text-[#2D2926] leading-[1.1] mb-6 lg:mb-8">
-				{site.hero.headline[0]}<br />
-				{site.hero.headline[1]}
-			</h1>
-			<p class="text-base lg:text-lg text-[#2D2926]/80 mb-8 lg:mb-12 leading-relaxed max-w-2xl">
-				{site.hero.description}
-			</p>
-			<div class="flex flex-col sm:flex-row gap-4 mb-6">
-				<a 
-					href="#house-types"
-					class="inline-flex items-center gap-2 bg-[#2D2926] text-white px-8 py-4 rounded-lg hover:bg-[#2D2926]/90 transition-colors text-sm font-medium uppercase"
-				>
-					{site.hero.cta}
-					<span class="w-5 h-5 bg-white/20 rounded flex items-center justify-center">
-						<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-						</svg>
-					</span>
-				</a>
-			</div>
-			{site.hero.trustLine && (
-				<p class="text-sm text-[#2D2926]/60">
-					{site.hero.trustLine}
-				</p>
-			)}
-		</div>
+<section id="home" class="relative min-h-[min(100svh,920px)] flex items-end">
+	<div class="absolute inset-0" aria-hidden="true">
+		<img
+			src={withBase(heroImageSrc)}
+			alt={site.hero.image.alt}
+			class="h-full w-full object-cover object-[center_42%]"
+			loading="eager"
+			fetchpriority="high"
+			decoding="async"
+		/>
+		<div class="absolute inset-0 bg-gradient-to-t from-[#2D2926]/80 via-[#2D2926]/45 to-[#2D2926]/25"></div>
 	</div>
-	<!-- Hero Image -->
-	{site.hero.image && (
-		<div class="w-full h-[50vh] lg:h-[70vh] relative overflow-hidden">
-			<img 
-				src={withBase(site.hero.image.src)} 
-				alt={site.hero.image.alt}
-				class="w-full h-full object-cover"
-				loading="eager"
-				decoding="async"
-			/>
+
+	<div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 lg:px-12 pb-12 lg:pb-20 pt-28 lg:pt-36">
+		<h1 class="hero-headline font-bold text-white mb-6 lg:mb-8 max-w-[min(100%,64rem)]">
+			{site.hero.headline}
+		</h1>
+		<p class="text-base lg:text-lg text-white/85 mb-8 lg:mb-12 leading-relaxed max-w-2xl">
+			{site.hero.description}
+		</p>
+		<div class="flex flex-col sm:flex-row gap-4 mb-6">
+			<a
+				href="#house-types"
+				class="inline-flex items-center gap-2 bg-white text-[#2D2926] px-8 py-4 rounded-lg hover:bg-white/90 transition-colors text-sm font-medium uppercase"
+			>
+				{site.hero.cta}
+				<span class="w-5 h-5 bg-[#2D2926]/10 rounded flex items-center justify-center">
+					<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+					</svg>
+				</span>
+			</a>
 		</div>
-	)}
+		{site.hero.trustLine && (
+			<p class="text-sm text-white/70">
+				{site.hero.trustLine}
+			</p>
+		)}
+	</div>
 </section>

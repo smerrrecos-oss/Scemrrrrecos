@@ -13,11 +13,14 @@ export const site = {
 	],
 	
 	hero: {
-		headline: ['Де зникає шум,', 'починається Smerecco'],
+		headline: 'Інвестуйте в унікальний комплекс в серці Карпат',
 		description: 'Локація біля гори Красія та Вищанських пірамід поєднує мальовничість, туристичний запит та інвестиційну перспективу регіону',
 		cta: 'ДІЗНАТИСЬ ДЕТАЛІ',
 		trustLine: 'Вже 50+ інвесторів • 9 років окупності • Прозора модель інвестування',
-		image: { src: 'images/hero.avif', alt: 'Smerecco architectural complex' },
+		image: {
+			src: 'images/hero-enhanced.webp',
+			alt: 'Smerecco — гірський комплекс у Карпатах',
+		},
 	},
 	
 	about: {
@@ -34,8 +37,8 @@ export const site = {
 			{ label: '9 років окупності', icon: '✓' },
 		],
 		images: [
-			{ src: 'images/about-main.avif', alt: 'Smerecco exterior' },
-			{ src: 'images/about-secondary.avif', alt: 'Smerecco master plan' },
+			{ src: 'images/about-main-enhanced.webp', alt: 'Smerecco exterior' },
+			{ src: 'images/about-secondary-enhanced.webp', alt: 'Smerecco master plan' },
 		],
 	},
 	
@@ -48,21 +51,21 @@ export const site = {
 				name: 'Тип 1 "Шишка"',
 				area: '52.62 м²',
 				description: 'Архітектурна перлина Smerecco. Форма, натхненна природою – купол, що нагадує шишку, органічно доповнює карпатський ландшафт.',
-				image: { src: 'images/type-shyshka.avif', alt: 'Тип 1 Шишка' },
+				image: { src: 'images/type-shyshka-enhanced.webp', alt: 'Тип 1 Шишка' },
 			},
 			{
 				id: 2,
 				name: 'Тип 2 "Обрій"',
 				area: '52.62 м²',
 				description: 'Усамітнення на вершині схилу. Будиночки з близьким доступом до SPA-центру і ресторану.',
-				image: { src: 'images/type-obriy.avif', alt: 'Тип 2 Обрій' },
+				image: { src: 'images/type-obriy-enhanced.webp', alt: 'Тип 2 Обрій' },
 			},
 			{
 				id: 3,
 				name: 'Тип 3 "Плесо"',
 				area: '52.62 м²',
 				description: 'Будиночки найбільшої площі створені для комфортного відпочинку з сім\'єю або друзями.',
-				image: { src: 'images/type-pleso.avif', alt: 'Тип 3 Плесо' },
+				image: { src: 'images/type-pleso-enhanced.webp', alt: 'Тип 3 Плесо' },
 			},
 		],
 	},
@@ -99,7 +102,7 @@ export const site = {
 		description: 'Комплекс розташований у селі Вишка, Великоберезнянський район Закарпатської області — в околицях гори Красія',
 		question: 'Як діститись до комплексу?',
 		subtitle: 'Ви можете обрати зручний спосіб доїзду:',
-		map: { src: 'images/location-map.jpg', alt: 'Smerecco location map' },
+		map: { src: 'images/location-map-enhanced.webp', alt: 'Smerecco location map' },
 		options: [
 			{
 				label: 'Автомобілем',
