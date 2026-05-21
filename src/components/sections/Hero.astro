@@ -1,17 +1,12 @@
 ---
-import { existsSync } from 'node:fs';
-import path from 'node:path';
 import { site } from '../../data/site';
 import { withBase } from '../../utils/withBase';
-
-const heroMainPath = path.join(process.cwd(), 'public/images/hero-main.jpg');
-const heroImageSrc = existsSync(heroMainPath) ? 'images/hero-main.jpg' : site.hero.image.src;
 ---
 
 <section id="home" class="relative min-h-[min(100svh,920px)] flex items-end">
 	<div class="absolute inset-0" aria-hidden="true">
 		<img
-			src={withBase(heroImageSrc)}
+			src={withBase(site.hero.image.src)}
 			alt={site.hero.image.alt}
 			class="h-full w-full object-cover object-[center_42%]"
 			loading="eager"

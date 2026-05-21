@@ -1,5 +1,6 @@
 ---
 import { site } from '../../data/site';
+import { withBase } from '../../utils/withBase';
 ---
 
 <section class="bg-[#1B4332]">
@@ -35,9 +36,18 @@ import { site } from '../../data/site';
 	
 	<!-- Bottom Section with Image Background -->
 	<div class="relative min-h-[500px] lg:min-h-[600px] bg-gradient-to-b from-[#1B4332] to-[#0F2E1F]">
-		<div class="absolute inset-0 bg-[#E8E8E0]/5">
-			<!-- Image background will be added here -->
-		</div>
+		{site.services.backgroundImage && (
+			<div class="absolute inset-0" aria-hidden="true">
+				<img
+					src={withBase(site.services.backgroundImage.src)}
+					alt={site.services.backgroundImage.alt}
+					class="h-full w-full object-cover object-[center_55%]"
+					loading="lazy"
+					decoding="async"
+				/>
+				<div class="absolute inset-0 bg-[#1B4332]/75"></div>
+			</div>
+		)}
 		<div class="relative max-w-[1440px] mx-auto px-6 lg:px-12 py-16 lg:py-24">
 			<div class="max-w-4xl">
 				<h2 class="text-3xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 lg:mb-8 leading-tight">

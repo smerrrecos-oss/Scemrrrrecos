@@ -10,9 +10,14 @@ import { withBase } from '../../utils/withBase';
 			<h2 class="text-2xl lg:text-4xl font-bold text-[#2D2926] mb-6 lg:mb-8">
 				{site.location.title}
 			</h2>
-			<p class="text-base lg:text-lg text-[#2D2926]/80 max-w-3xl leading-relaxed">
+			<p class="text-base lg:text-lg text-[#2D2926]/80 max-w-3xl leading-relaxed mb-2">
 				{site.location.description}
 			</p>
+			{site.location.address && (
+				<p class="text-base lg:text-lg font-medium text-[#2D2926] max-w-3xl">
+					{site.location.address}
+				</p>
+			)}
 		</div>
 		
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -41,7 +46,7 @@ import { withBase } from '../../utils/withBase';
 					<img 
 						src={withBase(site.location.map.src)} 
 						alt={site.location.map.alt}
-						class="w-full h-full object-cover rounded-lg"
+						class="w-full h-full object-contain object-center bg-[#F5F5F0] rounded-lg"
 						loading="lazy"
 						decoding="async"
 					/>

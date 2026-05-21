@@ -20,6 +20,17 @@ import { withBase } from '../../utils/withBase';
 			</div>
 		</div>
 		
+		{site.about.projectFacts && (
+			<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mb-12 lg:mb-16">
+				{site.about.projectFacts.map((fact) => (
+					<div class="border border-[#2D2926]/10 rounded-lg p-4 lg:p-6">
+						<p class="text-sm text-[#2D2926]/60 mb-1">{fact.label}</p>
+						<p class="text-base lg:text-lg font-semibold text-[#2D2926]">{fact.value}</p>
+					</div>
+				))}
+			</div>
+		)}
+
 		<!-- Stats -->
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16">
 			{site.about.stats.map((stat) => (

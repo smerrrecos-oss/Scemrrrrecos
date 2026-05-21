@@ -18,7 +18,7 @@ export const site = {
 		cta: 'ДІЗНАТИСЬ ДЕТАЛІ',
 		trustLine: 'Вже 50+ інвесторів • 9 років окупності • Прозора модель інвестування',
 		image: {
-			src: 'images/hero-enhanced.webp',
+			src: 'images/client/hero-main-client.webp',
 			alt: 'Smerecco — гірський комплекс у Карпатах',
 		},
 	},
@@ -36,9 +36,15 @@ export const site = {
 			{ label: 'Прозоре інвестування', icon: '✓' },
 			{ label: '9 років окупності', icon: '✓' },
 		],
+		projectFacts: [
+			{ label: 'Спа-центр', value: '360,34 м²' },
+			{ label: 'Тип 1', value: '5 будинків, 63,44 м²' },
+			{ label: 'Тип 2', value: '4 будинки, 52,62 м²' },
+			{ label: 'Тип 3', value: '2 будинки, 62,13 м²' },
+		],
 		images: [
-			{ src: 'images/about-main-enhanced.webp', alt: 'Smerecco exterior' },
-			{ src: 'images/about-secondary-enhanced.webp', alt: 'Smerecco master plan' },
+			{ src: 'images/client/masterplan-scheme.webp', alt: 'Концепція комплексу — генеральний план' },
+			{ src: 'images/client/masterplan-3d-view.webp', alt: 'Концепція комплексу — 3D-схема' },
 		],
 	},
 	
@@ -49,23 +55,23 @@ export const site = {
 			{
 				id: 1,
 				name: 'Тип 1 "Шишка"',
-				area: '52.62 м²',
+				area: '63,44 м²',
 				description: 'Архітектурна перлина Smerecco. Форма, натхненна природою – купол, що нагадує шишку, органічно доповнює карпатський ландшафт.',
-				image: { src: 'images/type-shyshka-enhanced.webp', alt: 'Тип 1 Шишка' },
+				image: { src: 'images/client/type-1-exterior-main.webp', alt: 'Тип 1 Шишка — екстер\'єр' },
 			},
 			{
 				id: 2,
 				name: 'Тип 2 "Обрій"',
-				area: '52.62 м²',
+				area: '52,62 м²',
 				description: 'Усамітнення на вершині схилу. Будиночки з близьким доступом до SPA-центру і ресторану.',
-				image: { src: 'images/type-obriy-enhanced.webp', alt: 'Тип 2 Обрій' },
+				image: { src: 'images/client/type-shyshka-exterior-main.webp', alt: 'Тип 2 Обрій — екстер\'єр' },
 			},
 			{
 				id: 3,
 				name: 'Тип 3 "Плесо"',
-				area: '52.62 м²',
+				area: '62,13 м²',
 				description: 'Будиночки найбільшої площі створені для комфортного відпочинку з сім\'єю або друзями.',
-				image: { src: 'images/type-pleso-enhanced.webp', alt: 'Тип 3 Плесо' },
+				image: { src: 'images/client/type-shyshka-exterior-side.webp', alt: 'Тип 3 Плесо — екстер\'єр' },
 			},
 		],
 	},
@@ -75,21 +81,25 @@ export const site = {
 		subheading: 'Smerecco дбає про кожну деталь, щоб надати преміальний рівень сервісу для гостей комплексу. На території чекають:',
 		items: [
 			{
-				title: 'Спа-комплекс',
-				description: 'Сучасний спа-комплекс, оснащений сауною, чанами та масажними кабінетами. Тут все створено для перезавантаження тіла й розуму.',
+				title: 'Спа-центр',
+				description: 'Сучасний спа-центр (360,34 м²) з сауною, банею, чанами та масажними кабінетами — для повного перезавантаження тіла й розуму.',
 				icon: 'spa',
 			},
 			{
-				title: 'Інфініті-басейн',
-				description: 'Безкрайній басейн зливається із горизонтом, що дарує відчуття повної свободи і релаксу.',
-				icon: 'pool',
+				title: 'Баня та чан',
+				description: 'Традиційна баня та чан на терасі з видом на гори — ідеальне поєднання для відновлення після активного дня.',
+				icon: 'bath',
 			},
 			{
-				title: 'Ресторан',
-				description: 'Авторські страви у ресторані з мальовничим краєвидом. Меню поєднує локальні інгредієнти, аутентичні страви та вишукану подачу.',
+				title: 'Кафе / ресторан',
+				description: 'Авторські страви у кафе та ресторані з мальовничим краєвидом. Меню поєднує локальні інгредієнти, аутентичні страви та вишукану подачу.',
 				icon: 'restaurant',
 			},
 		],
+		backgroundImage: {
+			src: 'images/client/spa-terrace-main.webp',
+			alt: 'Тераса спа-центру Smerecco',
+		},
 		cta: {
 			title: 'Ознайомтесь із деталями прозорого інвестування Smerecco',
 			subtitle: 'Слідкуйте за проектом в Instagram, де ми відкрито показуємо процеси, відповідаємо на питання й ділимось етапами створення комплексу.',
@@ -99,10 +109,11 @@ export const site = {
 	
 	location: {
 		title: 'Де знаходиться',
+		address: 'село Вишка, Великоберезнянський район, Закарпатська область',
 		description: 'Комплекс розташований у селі Вишка, Великоберезнянський район Закарпатської області — в околицях гори Красія',
 		question: 'Як діститись до комплексу?',
 		subtitle: 'Ви можете обрати зручний спосіб доїзду:',
-		map: { src: 'images/location-map-enhanced.webp', alt: 'Smerecco location map' },
+		map: { src: 'images/client/location-pdf-map.webp', alt: 'Карта розташування Smerecco' },
 		options: [
 			{
 				label: 'Автомобілем',
