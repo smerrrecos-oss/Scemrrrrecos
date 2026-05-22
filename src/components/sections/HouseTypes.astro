@@ -23,7 +23,7 @@ import { withBase } from '../../utils/withBase';
 							{type.name}
 						</h3>
 						<p class="text-base text-[#2D2926]/70 mb-4">
-							Площа будинку - {type.area}
+							{type.area === 'Площа уточнюється' ? type.area : `Площа будинку - ${type.area}`}
 						</p>
 						<p class="text-base lg:text-lg text-[#2D2926]/80 mb-6 leading-relaxed max-w-2xl">
 							{type.description}
@@ -40,16 +40,18 @@ import { withBase } from '../../utils/withBase';
 							</span>
 						</a>
 					</div>
-					<div class:list={[
-						'flex-1 w-full h-[400px] lg:h-[500px] rounded-lg relative overflow-hidden',
-						type.image?.fit === 'contain' && 'bg-[#F5F5F0]',
-					]}>
+					<div
+						class:list={[
+							'flex-1 w-full h-[400px] lg:h-[500px] rounded-lg overflow-hidden',
+							type.image?.fit === 'contain' ? 'bg-[#F5F5F0]' : 'bg-[#E8E8E0]',
+						]}
+					>
 						{type.image && (
 							<img 
 								src={withBase(type.image.src)} 
 								alt={type.image.alt}
 								class:list={[
-									'w-full h-full rounded-lg',
+									'block w-full h-full',
 									type.image.fit === 'contain'
 										? 'object-contain object-center'
 										: type.image.objectPosition === 'center'

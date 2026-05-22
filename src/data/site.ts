@@ -64,7 +64,11 @@ export const site = {
 				name: 'Тип 2 "Обрій"',
 				area: '52,62 м²',
 				description: 'Усамітнення на вершині схилу. Будиночки з близьким доступом до SPA-центру і ресторану.',
-				image: { src: 'images/client/gallery-exterior-02.webp', alt: 'Тип 2 Обрій — екстер\'єр комплексу' },
+				image: {
+					src: 'images/client/about-exterior-side.webp',
+					alt: 'Тип 2 Обрій — екстер\'єр',
+					objectPosition: 'center',
+				},
 			},
 			{
 				id: 3,
