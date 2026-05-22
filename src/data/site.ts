@@ -3,7 +3,7 @@ export const site = {
 	description: 'Місце, що дарує незабутні відчуття перезавантаження. Первозданна локація, унікальні архітектурні рішення й філософія створюють попит, що зростатиме з кожним сезоном.',
 	phone: '+380 66 555 44 33',
 	email: 'smerecco@gmail.com',
-	address: 'Львів, Пасічна 64 2',
+	address: 'село Вишка, Великоберезнянський район, Закарпатська область',
 	
 	nav: [
 		{ label: 'Головна', href: '#home' },
@@ -50,7 +50,7 @@ export const site = {
 	
 	houseTypes: {
 		title: 'Типи будинків',
-		intro: 'У Smerecсо передбачено три типи будинків різної площі, вмісткості, бюджету та формату відпочинку. Обирайте той, що підходить саме вам.',
+		intro: 'У Smerecco передбачено чотири типи будинків різної площі, вмісткості, бюджету та формату відпочинку. Обирайте той, що підходить саме вам.',
 		types: [
 			{
 				id: 1,
@@ -64,14 +64,30 @@ export const site = {
 				name: 'Тип 2 "Обрій"',
 				area: '52,62 м²',
 				description: 'Усамітнення на вершині схилу. Будиночки з близьким доступом до SPA-центру і ресторану.',
-				image: { src: 'images/client/type-shyshka-exterior-main.webp', alt: 'Тип 2 Обрій — екстер\'єр' },
+				image: { src: 'images/client/gallery-exterior-02.webp', alt: 'Тип 2 Обрій — екстер\'єр комплексу' },
 			},
 			{
 				id: 3,
 				name: 'Тип 3 "Плесо"',
 				area: '62,13 м²',
 				description: 'Будиночки найбільшої площі створені для комфортного відпочинку з сім\'єю або друзями.',
-				image: { src: 'images/client/type-shyshka-exterior-side.webp', alt: 'Тип 3 Плесо — екстер\'єр' },
+				image: {
+					src: 'images/client/type-2-3-plan.webp',
+					alt: 'Тип 3 Плесо — план поверху',
+					fit: 'contain',
+				},
+			},
+			{
+				id: 4,
+				name: 'Тип 4',
+				area: 'Площа уточнюється',
+				description:
+					'Будинок для відпочинку серед природи з відкритими краєвидами, просторою зоною відпочинку та інтерʼєром, орієнтованим на приватність і комфорт.',
+				image: {
+					src: 'images/client/house-4/house-4-exterior-river.webp',
+					alt: 'Тип 4 — екстер\'єр біля річки',
+					objectPosition: 'center',
+				},
 			},
 		],
 	},
@@ -183,7 +199,6 @@ export const site = {
 			{ label: 'Instagram', href: 'https://instagram.com/smerecco' },
 			{ label: 'Facebook', href: 'https://facebook.com/smerecco' },
 		],
-		policy: { label: 'Політика конфіденційності', href: '/privacy-policy' },
 		trustBadges: [
 			{ label: 'Юридична гарантія', icon: '✓' },
 			{ label: 'Прозоре інвестування', icon: '✓' },
